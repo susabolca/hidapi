@@ -184,6 +184,9 @@ extern "C" {
 			    Since version 0.13.0, @ref HID_API_VERSION >= HID_API_MAKE_VERSION(0, 13, 0)
 			*/
 			hid_bus_type bus_type;
+
+			unsigned short cap_InReportBytes;
+			unsigned short cap_OutReportBytes;
 		};
 
 

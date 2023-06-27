@@ -728,6 +728,8 @@ static struct hid_device_info *hid_internal_get_device_info(const wchar_t *path,
 		if (HidP_GetCaps(pp_data, &caps) == HIDP_STATUS_SUCCESS) {
 			dev->usage_page = caps.UsagePage;
 			dev->usage = caps.Usage;
+			dev->cap_InReportBytes = caps.InputReportByteLength;
+			dev->cap_OutReportBytes = caps.OutputReportByteLength;
 		}
 
 		HidD_FreePreparsedData(pp_data);
